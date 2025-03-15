@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -6,6 +5,7 @@ import { ArrowRight, Star, Trophy, Users, Lightbulb, Target } from "lucide-react
 
 import HeroSection from "@/components/HeroSection";
 import ProjectCard from "@/components/ProjectCard";
+import VideoSection from "@/components/VideoSection";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -119,6 +119,9 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+      
+      {/* Video Section */}
+      <VideoSection />
       
       {/* Achievement Highlights */}
       <section className="py-24 bg-enactus-blue text-white relative overflow-hidden">

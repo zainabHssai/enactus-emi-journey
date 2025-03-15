@@ -352,6 +352,97 @@ const WhoWeAre = () => {
         </div>
       </section>
       
+      {/* Team Photos Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-yellow rounded-full text-sm font-medium mb-3"
+            >
+              Team Achievements
+            </motion.div>
+            
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-3xl font-bold text-white mb-4"
+            >
+              Our Global Competitions
+            </motion.h2>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-gray-300"
+            >
+              Representing Morocco on the world stage at Enactus World Cup competitions
+            </motion.p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="overflow-hidden"
+            >
+              <div className="relative">
+                <div className="relative rounded-xl overflow-hidden shadow-xl group">
+                  <img
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                    alt="Enactus EMI team at Kazakhstan 2024"
+                    className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    style={{ aspectRatio: "16/9" }}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <h3 className="text-2xl font-bold text-white">Kazakhstan 2024</h3>
+                    <p className="text-enactus-yellow">Vice World Champion 🇰🇿</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="overflow-hidden"
+            >
+              <div className="relative">
+                <div className="relative rounded-xl overflow-hidden shadow-xl group">
+                  <img
+                    src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+                    alt="Enactus EMI team at Puerto Rico 2022"
+                    className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-105"
+                    style={{ aspectRatio: "16/9" }}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    <h3 className="text-2xl font-bold text-white">Puerto Rico 2022</h3>
+                    <p className="text-enactus-yellow">Semi-finalist 🇵🇷</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
       {/* Join Us Section */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-6">
