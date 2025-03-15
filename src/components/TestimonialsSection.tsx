@@ -14,7 +14,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "IHab Bokal",
+    name: "Mohammed Salmoun",
     role: "Team Leader, Enactus EMI",
     quote: "The journey to Kazakhstan taught us that determination and innovation can overcome any challenge. We're proud to bring back the Vice World Champion title to Morocco.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&crop=faces&fit=crop"
@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
     name: "Aya EL BOUZIDI",
     role: "EPIC Project Manager, Enactus EMI",
     quote: "EPIC was not just a project it was a dream that we built with passion and hard work. From struggling to standing on the world stage, this experience showed me that nothing is impossible with the right team and mindset.",
-    image: "/public/bouzidi.jpeg"
+    image: "/bouzidi.jpeg"
   },
   {
     id: 3,
