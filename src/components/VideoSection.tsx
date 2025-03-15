@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Play, Maximize2 } from "lucide-react";
+import { Play, Maximize2, X } from "lucide-react";
 
 interface VideoProps {
   id: string;
@@ -34,7 +34,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-enactus-black">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,13 @@ const VideoSection = () => {
 
       {/* Video Modal */}
       {selectedVideo && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4" onClick={closeModal}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
           <div className="relative w-full max-w-4xl mx-auto aspect-video">
             <iframe
               src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
@@ -107,13 +113,14 @@ const VideoSection = () => {
               onClick={(e) => e.stopPropagation()}
             ></iframe>
             <button 
-              className="absolute -top-10 right-0 text-white hover:text-enactus-yellow"
+              className="absolute -top-10 right-0 text-white hover:text-enactus-yellow flex items-center"
               onClick={closeModal}
             >
-              Close
+              <span className="mr-2">Close</span>
+              <X size={20} />
             </button>
           </div>
-        </div>
+        </motion.div>
       )}
     </section>
   );

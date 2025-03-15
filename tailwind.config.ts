@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				enactus: {
-					blue: '#0077c8',
 					yellow: '#ffc423',
+					black: '#000000',
 					lightgray: '#f5f5f7',
-					darkblue: '#005a9c'
+					darkgray: '#333333'
 				}
 			},
 			borderRadius: {
@@ -93,6 +93,14 @@ export default {
 				'image-shine': {
 					'0%': { 'background-position': '200% 0' },
 					'100%': { 'background-position': '-200% 0' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
 				}
 			},
 			animation: {
@@ -102,7 +110,9 @@ export default {
 				'fade-in-up': 'fade-in-up 0.7s ease-out forwards',
 				'slide-in-right': 'slide-in-right 0.5s ease-out forwards',
 				'slide-in-left': 'slide-in-left 0.5s ease-out forwards',
-				'image-shine': 'image-shine 2.5s linear infinite'
+				'image-shine': 'image-shine 2.5s linear infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
 			},
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],

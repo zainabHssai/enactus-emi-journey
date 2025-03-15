@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -6,6 +7,9 @@ import { ArrowRight, Star, Trophy, Users, Lightbulb, Target } from "lucide-react
 import HeroSection from "@/components/HeroSection";
 import ProjectCard from "@/components/ProjectCard";
 import VideoSection from "@/components/VideoSection";
+import SDGsSection from "@/components/SDGsSection";
+import QuotesSection from "@/components/QuotesSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -63,12 +67,15 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <HeroSection />
       
+      {/* Quotes Section */}
+      <QuotesSection />
+      
       {/* Featured Projects Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-background to-muted">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -77,13 +84,13 @@ const Index = () => {
             variants={staggerContainer}
             className="text-center mb-16"
           >
-            <motion.div variants={fadeInUp} className="inline-block px-3 py-1 bg-enactus-blue/10 text-enactus-blue rounded-full text-sm font-medium mb-3">
+            <motion.div variants={fadeInUp} className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-black dark:text-enactus-yellow rounded-full text-sm font-medium mb-3">
               Our Projects
             </motion.div>
-            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 text-enactus-black dark:text-white">
               Creating Lasting Impact
             </motion.h2>
-            <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-gray-600">
+            <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-muted-foreground">
               Through innovation and entrepreneurial action, we develop projects that address social, economic, and environmental challenges.
             </motion.p>
           </motion.div>
@@ -111,7 +118,7 @@ const Index = () => {
           >
             <Link
               to="/our-projects"
-              className="inline-flex items-center px-6 py-3 bg-white border border-gray-300 text-enactus-blue font-medium rounded-md hover:bg-gray-50 transition-all duration-300 group"
+              className="inline-flex items-center px-6 py-3 bg-card border border-border text-enactus-yellow font-medium rounded-md hover:bg-muted transition-all duration-300 group"
             >
               <span>Explore All Projects</span>
               <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -123,12 +130,18 @@ const Index = () => {
       {/* Video Section */}
       <VideoSection />
       
+      {/* SDGs Section */}
+      <SDGsSection />
+      
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+      
       {/* Achievement Highlights */}
-      <section className="py-24 bg-enactus-blue text-white relative overflow-hidden">
+      <section className="py-24 bg-enactus-black text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-black/10 to-transparent" />
           <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-enactus-yellow/20 blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-blue-600/20 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-enactus-yellow/10 blur-3xl" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
@@ -145,7 +158,7 @@ const Index = () => {
             <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4">
               Our Achievements
             </motion.h2>
-            <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-blue-100">
+            <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-gray-300">
               Enactus EMI has been recognized on the global stage for our impactful projects and innovative solutions.
             </motion.p>
           </motion.div>
@@ -173,10 +186,10 @@ const Index = () => {
                   className="text-center"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-4">
-                    <Trophy size={24} className="text-white" />
+                    <Trophy size={24} className="text-enactus-yellow" />
                   </div>
                   <h3 className="text-xl font-bold mb-1">{achievement.position}</h3>
-                  <p className="text-blue-100">{achievement.year} {achievement.flag}</p>
+                  <p className="text-gray-300">{achievement.year} {achievement.flag}</p>
                 </motion.div>
               ))}
             </div>
@@ -190,7 +203,7 @@ const Index = () => {
             >
               <Link
                 to="/palmares"
-                className="inline-flex items-center px-6 py-3 bg-white text-enactus-blue font-medium rounded-md hover:bg-gray-50 transition-all duration-300 group"
+                className="inline-flex items-center px-6 py-3 bg-enactus-yellow text-enactus-black font-medium rounded-md hover:bg-enactus-yellow/90 transition-all duration-300 group"
               >
                 <span>View All Achievements</span>
                 <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -201,7 +214,7 @@ const Index = () => {
       </section>
       
       {/* Key Stats Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {stats.map((stat, index) => (
@@ -213,11 +226,11 @@ const Index = () => {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-enactus-blue/10 text-enactus-blue mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-enactus-yellow/10 text-enactus-yellow mb-4">
                   <stat.icon size={28} />
                 </div>
-                <h3 className="text-4xl font-bold text-gray-900 mb-2">{stat.value}</h3>
-                <p className="text-gray-600">{stat.label}</p>
+                <h3 className="text-4xl font-bold text-enactus-black dark:text-white mb-2">{stat.value}</h3>
+                <p className="text-muted-foreground">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -225,17 +238,17 @@ const Index = () => {
       </section>
       
       {/* Call to Action */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="bg-gradient-to-r from-enactus-blue to-blue-600 rounded-2xl p-10 text-white text-center shadow-xl relative overflow-hidden"
+            className="bg-gradient-to-r from-enactus-black to-enactus-black/80 rounded-2xl p-10 text-white text-center shadow-xl relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05')] bg-cover bg-center opacity-10"></div>
-            <div className="absolute inset-0 bg-enactus-blue/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-enactus-black/90 to-enactus-black/70"></div>
             
             <div className="relative z-10 max-w-3xl mx-auto">
               <motion.h2
@@ -253,7 +266,7 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-blue-100 mb-8 text-lg"
+                className="text-gray-300 mb-8 text-lg"
               >
                 Whether you're interested in volunteering, partnering, or supporting our initiatives, there are many ways you can contribute to our mission.
               </motion.p>
@@ -267,7 +280,7 @@ const Index = () => {
               >
                 <Link
                   to="/our-mission"
-                  className="px-6 py-3 bg-white text-enactus-blue font-medium rounded-md hover:bg-gray-50 transition-all duration-300"
+                  className="px-6 py-3 bg-enactus-yellow text-enactus-black font-medium rounded-md hover:bg-enactus-yellow/90 transition-all duration-300"
                 >
                   Learn More
                 </Link>
