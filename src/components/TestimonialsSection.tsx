@@ -21,10 +21,10 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Sara El Haddaoui",
-    role: "Project Manager, Enactus EMI",
-    quote: "What sets Enactus EMI apart is our commitment to sustainable impact. Our projects don't just solve problems; they create lasting change for communities.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&crop=faces&fit=crop"
+    name: "Aya EL BOUZIDI",
+    role: "EPIC Project Manager, Enactus EMI",
+    quote: "EPIC was not just a project it was a dream that we built with passion and hard work. From struggling to standing on the world stage, this experience showed me that nothing is impossible with the right team and mindset.",
+    image: "/public/bouzidi.jpeg"
   },
   {
     id: 3,
