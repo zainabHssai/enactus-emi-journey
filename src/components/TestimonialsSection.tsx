@@ -14,7 +14,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Mohammed Salmoun",
+    name: "IHab Bokal",
     role: "Team Leader, Enactus EMI",
     quote: "The journey to Kazakhstan taught us that determination and innovation can overcome any challenge. We're proud to bring back the Vice World Champion title to Morocco.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&crop=faces&fit=crop"
