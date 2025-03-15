@@ -3,12 +3,13 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeProvider";
+import { ThemeToggle, useTheme } from "./ThemeProvider";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme } = useTheme();
 
   const navItems = [
     { name: "Who We Are", path: "/who-we-are" },
@@ -57,7 +58,7 @@ const Navbar = () => {
             className="text-xl font-bold tracking-tight"
           >
             <span className="text-enactus-yellow">Enactus</span>
-            <span className="text-enactus-black dark:text-white"> EMI</span>
+            <span className={theme === "dark" ? "text-white" : "text-enactus-black"}> EMI</span>
           </motion.div>
         </Link>
 

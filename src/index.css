@@ -83,6 +83,15 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
   }
+  
+  /* Ensure text in dark mode has proper contrast */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    @apply text-white;
+  }
+  
+  .dark p, .dark span, .dark div {
+    @apply text-gray-200;
+  }
 }
 
 @layer utilities {
@@ -158,6 +167,27 @@
 
 .dark .card-hover:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode specific text colors */
+.dark .text-enactus-black {
+  @apply text-white;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-200;
+}
+
+.dark .text-gray-800 {
+  @apply text-gray-100;
+}
+
+.dark .text-gray-900 {
+  @apply text-white;
 }
 
 /* Page transitions */

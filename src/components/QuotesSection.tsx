@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote as QuoteIcon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 interface Quote {
   id: number;
@@ -39,6 +40,7 @@ const quotes: Quote[] = [
 
 const QuotesSection = () => {
   const [currentQuote, setCurrentQuote] = useState(0);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,7 +69,7 @@ const QuotesSection = () => {
               className="relative z-10"
             >
               <QuoteIcon className="w-12 h-12 mx-auto mb-6 text-enactus-yellow" />
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-enactus-black dark:text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
                 {quotes[currentQuote].text}
               </h2>
               {quotes[currentQuote].author && (
