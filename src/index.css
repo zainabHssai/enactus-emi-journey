@@ -92,15 +92,6 @@
   .dark p, .dark span, .dark div {
     @apply text-gray-200;
   }
-  
-  /* Light mode specific styles */
-  h1, h2, h3, h4, h5, h6 {
-    @apply text-black;
-  }
-  
-  p, span, div {
-    @apply text-gray-700;
-  }
 }
 
 @layer utilities {
@@ -219,11 +210,6 @@
   @apply border-gray-700;
 }
 
-/* Navbar and footer remain black in light mode */
-.bg-enactus-black {
-  @apply bg-black;
-}
-
 /* Page transitions */
 .page-transition-enter {
   opacity: 0;
@@ -266,4 +252,3 @@
 .dark .sdg-card {
   @apply bg-gray-800 border-gray-700 shadow-none hover:shadow-enactus-yellow/20;
 }
-

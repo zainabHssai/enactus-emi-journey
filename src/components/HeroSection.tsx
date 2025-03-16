@@ -3,11 +3,13 @@ import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTheme } from "./ThemeProvider";
 
 const HeroSection = () => {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (isInView) {
@@ -52,11 +54,13 @@ const HeroSection = () => {
     },
   };
 
+  const isDark = theme === "dark";
+
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden bg-enactus-black">
+    <div className="relative min-h-screen flex items-center overflow-hidden hero-gradient">
       {/* Background gradient elements */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/10 to-transparent dark:from-black/10" />
+      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-white to-transparent dark:from-background" />
       
       {/* Subtle background patterns */}
       <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-enactus-yellow/5 blur-3xl" />
@@ -73,14 +77,14 @@ const HeroSection = () => {
           >
             <motion.div variants={itemVariants} className="space-y-2">
               <motion.div 
-                className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-yellow rounded-full text-sm font-medium"
+                className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-black dark:text-enactus-yellow rounded-full text-sm font-medium"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
                 Vice World Champion 2024 🇰🇿
               </motion.div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-foreground">
                 Transforming Lives Through <br />
                 <span className="text-enactus-yellow">Entrepreneurial Action</span>
               </h1>
@@ -117,7 +121,7 @@ const HeroSection = () => {
               >
                 <Link
                   to="/our-projects"
-                  className="inline-flex items-center px-6 py-3 border border-gray-700 text-white font-medium rounded-md hover:bg-background/80 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 text-foreground font-medium rounded-md hover:bg-background/80 transition-all duration-300"
                 >
                   <span>Our Projects</span>
                 </Link>
@@ -153,8 +157,8 @@ const HeroSection = () => {
                   <div className="w-2 h-2 bg-enactus-yellow rounded-full animate-pulse" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white">Global Recognition</h3>
-                  <p className="text-sm text-white/80">Consistently ranked among the world's top Enactus teams since 2013</p>
+                  <h3 className="font-semibold text-foreground">Global Recognition</h3>
+                  <p className="text-sm text-foreground/80">Consistently ranked among the world's top Enactus teams since 2013</p>
                 </div>
               </div>
             </motion.div>
