@@ -67,15 +67,53 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white dark:bg-background">
       {/* Hero Section */}
       <HeroSection />
       
       {/* Quotes Section */}
       <QuotesSection />
       
+      {/* Our Mission Section (Simplified to just a link) */}
+      <section className="py-20 bg-gray-50 dark:bg-muted/50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+            className="text-center"
+          >
+            <motion.div variants={fadeInUp} className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-black dark:text-enactus-yellow rounded-full text-sm font-medium mb-3">
+              Our Purpose
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
+              Discover Our Mission
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-gray-700 dark:text-muted-foreground mb-8">
+              Learn how we're using entrepreneurial action to create a better world through innovation and sustainable solutions.
+            </motion.p>
+            
+            <motion.div
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block"
+            >
+              <Link
+                to="/our-mission"
+                className="inline-flex items-center px-6 py-3 bg-enactus-yellow text-enactus-black font-medium rounded-md hover:bg-enactus-yellow/90 transition-all duration-300 group"
+              >
+                <span>Explore Our Mission</span>
+                <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+      
       {/* Featured Projects Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted">
+      <section className="py-20 bg-white dark:bg-background">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -87,10 +125,10 @@ const Index = () => {
             <motion.div variants={fadeInUp} className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-black dark:text-enactus-yellow rounded-full text-sm font-medium mb-3">
               Our Projects
             </motion.div>
-            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 text-enactus-black dark:text-white">
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
               Creating Lasting Impact
             </motion.h2>
-            <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-muted-foreground">
+            <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-gray-700 dark:text-muted-foreground">
               Through innovation and entrepreneurial action, we develop projects that address social, economic, and environmental challenges.
             </motion.p>
           </motion.div>
@@ -118,7 +156,7 @@ const Index = () => {
           >
             <Link
               to="/our-projects"
-              className="inline-flex items-center px-6 py-3 bg-card border border-border text-enactus-yellow font-medium rounded-md hover:bg-muted transition-all duration-300 group"
+              className="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-card border border-gray-200 dark:border-border text-black dark:text-enactus-yellow font-medium rounded-md hover:bg-gray-200 dark:hover:bg-muted transition-all duration-300 group"
             >
               <span>Explore All Projects</span>
               <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -214,7 +252,7 @@ const Index = () => {
       </section>
       
       {/* Key Stats Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white dark:bg-background">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {stats.map((stat, index) => (
@@ -229,8 +267,8 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-enactus-yellow/10 text-enactus-yellow mb-4">
                   <stat.icon size={28} />
                 </div>
-                <h3 className="text-4xl font-bold text-enactus-black dark:text-white mb-2">{stat.value}</h3>
-                <p className="text-muted-foreground">{stat.label}</p>
+                <h3 className="text-4xl font-bold text-black dark:text-white mb-2">{stat.value}</h3>
+                <p className="text-gray-700 dark:text-muted-foreground">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -238,7 +276,7 @@ const Index = () => {
       </section>
       
       {/* Call to Action */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-gray-50 dark:bg-muted">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

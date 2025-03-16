@@ -84,7 +84,7 @@ const HeroSection = () => {
               >
                 Vice World Champion 2024 🇰🇿
               </motion.div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-foreground">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-black dark:text-white">
                 Transforming Lives Through <br />
                 <span className="text-enactus-yellow">Entrepreneurial Action</span>
               </h1>
@@ -92,7 +92,7 @@ const HeroSection = () => {
             
             <motion.p 
               variants={itemVariants}
-              className="text-lg text-foreground/80 max-w-lg leading-relaxed"
+              className="text-lg text-gray-700 dark:text-foreground/80 max-w-lg leading-relaxed"
             >
               Enactus EMI empowers students to use innovation and entrepreneurship to create a better, more sustainable world for us all.
             </motion.p>
@@ -121,7 +121,7 @@ const HeroSection = () => {
               >
                 <Link
                   to="/our-projects"
-                  className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 text-foreground font-medium rounded-md hover:bg-background/80 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-700 text-black dark:text-white font-medium rounded-md hover:bg-gray-100 dark:hover:bg-background/80 transition-all duration-300"
                 >
                   <span>Our Projects</span>
                 </Link>
@@ -157,8 +157,8 @@ const HeroSection = () => {
                   <div className="w-2 h-2 bg-enactus-yellow rounded-full animate-pulse" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground">Global Recognition</h3>
-                  <p className="text-sm text-foreground/80">Consistently ranked among the world's top Enactus teams since 2013</p>
+                  <h3 className="font-semibold text-black dark:text-white">Global Recognition</h3>
+                  <p className="text-sm text-gray-700 dark:text-white/80">Consistently ranked among the world's top Enactus teams since 2013</p>
                 </div>
               </div>
             </motion.div>
