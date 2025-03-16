@@ -57,8 +57,20 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="text-xl font-bold tracking-tight"
           >
-            <span className="text-enactus-yellow">Enactus</span>
-            <span className="text-white"> EMI</span>
+            <motion.span 
+              className="text-enactus-yellow"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              Enactus
+            </motion.span>
+            <motion.span 
+              className="text-white"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              {" EMI"}
+            </motion.span>
           </motion.div>
         </Link>
 

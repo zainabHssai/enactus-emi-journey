@@ -1,7 +1,8 @@
-
 import React from "react";
 import { motion } from "framer-motion";
 import ImpactNumbers from "@/components/ImpactNumbers";
+import QuotesSection from "@/components/QuotesSection";
+import SummitAnnouncement from "@/components/SummitAnnouncement";
 
 const WhoWeAre = () => {
   return (
@@ -16,8 +17,9 @@ const WhoWeAre = () => {
             transition={{ duration: 0.5 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Who <span className="text-enactus-yellow">We Are</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-white">Who </span>
+              <span className="text-enactus-yellow">We Are</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
               Enactus EMI is a community of student entrepreneurs united by the belief that entrepreneurial action can drive positive change in the world.
@@ -41,8 +43,9 @@ const WhoWeAre = () => {
                   Our Story
                 </span>
               </div>
-              <h2 className="text-3xl font-bold mb-6 text-white">
-                Driving Social Change Through Entrepreneurial Action
+              <h2 className="text-3xl font-bold mb-6">
+                <span className="text-enactus-yellow">Driving Social Change</span>
+                <span className="text-white"> Through Entrepreneurial Action</span>
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p>
@@ -84,6 +87,9 @@ const WhoWeAre = () => {
         </div>
       </section>
 
+      {/* Dynamic Quotes Section */}
+      <QuotesSection />
+
       {/* Impact Numbers */}
       <ImpactNumbers />
 
@@ -97,7 +103,10 @@ const WhoWeAre = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-6 text-white">Our Vision & Mission</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              <span className="text-white">Our </span>
+              <span className="text-enactus-yellow">Vision & Mission</span>
+            </h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
               We are driven by a clear purpose and ambitious goals for creating positive change.
             </p>
@@ -155,7 +164,10 @@ const WhoWeAre = () => {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold mb-6 text-white">Our Core Values</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              <span className="text-enactus-yellow">Our Core </span>
+              <span className="text-white">Values</span>
+            </h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
               These principles guide everything we do at Enactus EMI.
             </p>
@@ -201,33 +213,8 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      {/* Inspiring Quotes */}
-      <section className="py-20 bg-gray-800 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-enactus-black/30"></div>
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-enactus-yellow/20 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-enactus-yellow/20 to-transparent"></div>
-        </div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-center"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-10 text-white italic">
-                "Pushing boundaries, driving changes. Once an Enactor, always an Enactor."
-              </h2>
-              <p className="text-enactus-yellow font-medium">
-                — Enactus EMI Vision
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Entrepreneurial Summit Announcement */}
+      <SummitAnnouncement />
 
       {/* Call to Action */}
       <section className="py-16 bg-gray-900">
@@ -250,7 +237,8 @@ const WhoWeAre = () => {
                 transition={{ duration: 0.5 }}
                 className="text-3xl md:text-4xl font-bold mb-6"
               >
-                Join Our Journey of Impact
+                <span className="text-white">Join Our </span>
+                <span className="text-enactus-yellow">Journey of Impact</span>
               </motion.h2>
               
               <motion.p
