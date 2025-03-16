@@ -39,13 +39,13 @@
   }
 
   .dark {
-    --background: 0 0% 5%;
+    --background: 0 0% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 10%;
+    --card: 0 0% 15%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 10%;
+    --popover: 0 0% 15%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 45 100% 56%;
@@ -169,25 +169,45 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Dark mode specific text colors */
-.dark .text-enactus-black {
+/* Preserve proper text color contrast in both modes */
+.dark .text-gray-900 {
   @apply text-white;
-}
-
-.dark .text-gray-600 {
-  @apply text-gray-300;
-}
-
-.dark .text-gray-700 {
-  @apply text-gray-200;
 }
 
 .dark .text-gray-800 {
   @apply text-gray-100;
 }
 
-.dark .text-gray-900 {
-  @apply text-white;
+.dark .text-gray-700 {
+  @apply text-gray-200;
+}
+
+.dark .text-gray-600 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-500 {
+  @apply text-gray-400;
+}
+
+.dark .bg-white {
+  @apply bg-gray-900;
+}
+
+.dark .bg-gray-50 {
+  @apply bg-gray-800;
+}
+
+.dark .bg-gray-100 {
+  @apply bg-gray-800;
+}
+
+.dark .border-gray-100 {
+  @apply border-gray-800;
+}
+
+.dark .border-gray-200 {
+  @apply border-gray-700;
 }
 
 /* Page transitions */
@@ -212,21 +232,23 @@
   transition: opacity 300ms, transform 300ms;
 }
 
-/* SDG colors */
-.sdg-1 { background-color: #e5243b; }
-.sdg-2 { background-color: #DDA63A; }
-.sdg-3 { background-color: #4C9F38; }
-.sdg-4 { background-color: #C5192D; }
-.sdg-5 { background-color: #FF3A21; }
-.sdg-6 { background-color: #26BDE2; }
-.sdg-7 { background-color: #FCC30B; }
-.sdg-8 { background-color: #A21942; }
-.sdg-9 { background-color: #FD6925; }
-.sdg-10 { background-color: #DD1367; }
-.sdg-11 { background-color: #FD9D24; }
-.sdg-12 { background-color: #BF8B2E; }
-.sdg-13 { background-color: #3F7E44; }
-.sdg-14 { background-color: #0A97D9; }
-.sdg-15 { background-color: #56C02B; }
-.sdg-16 { background-color: #00689D; }
-.sdg-17 { background-color: #19486A; }
+/* Custom animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* SDG neutral colors for dark mode */
+.dark .sdg-card {
+  @apply bg-gray-800 border-gray-700 shadow-none hover:shadow-enactus-yellow/20;
+}

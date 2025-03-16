@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <motion.footer 
-      className="bg-gray-50 py-16"
+      className="bg-enactus-black py-16 text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -36,11 +36,11 @@ const Footer = () => {
           <motion.div variants={itemAnimation} className="space-y-6">
             <div className="flex items-center space-x-2">
               <div className="text-xl font-bold tracking-tight">
-                <span className="text-enactus-blue">Enactus</span>
-                <span className="text-black"> EMI</span>
+                <span className="text-enactus-yellow">Enactus</span>
+                <span className="text-white"> EMI</span>
               </div>
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
+            <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
               Enactus EMI is a student organization that creates community development projects, applying business concepts to improve quality of life.
             </p>
             <div className="flex space-x-4">
@@ -49,7 +49,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-gray-500 hover:text-enactus-blue transition-colors duration-300"
+                className="text-gray-300 hover:text-enactus-yellow transition-colors duration-300"
               >
                 <Instagram size={20} />
               </a>
@@ -58,7 +58,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-gray-500 hover:text-enactus-blue transition-colors duration-300"
+                className="text-gray-300 hover:text-enactus-yellow transition-colors duration-300"
               >
                 <Facebook size={20} />
               </a>
@@ -67,7 +67,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-gray-500 hover:text-enactus-blue transition-colors duration-300"
+                className="text-gray-300 hover:text-enactus-yellow transition-colors duration-300"
               >
                 <Linkedin size={20} />
               </a>
@@ -75,52 +75,52 @@ const Footer = () => {
           </motion.div>
           
           <motion.div variants={itemAnimation} className="space-y-4">
-            <h3 className="font-semibold text-base">Quick Links</h3>
+            <h3 className="font-semibold text-base text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/who-we-are" className="text-gray-600 hover:text-enactus-blue text-sm transition-colors duration-300">
+                <Link to="/who-we-are" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
                   Who We Are
                 </Link>
               </li>
               <li>
-                <Link to="/our-projects" className="text-gray-600 hover:text-enactus-blue text-sm transition-colors duration-300">
+                <Link to="/our-projects" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
                   Our Projects
                 </Link>
               </li>
               <li>
-                <Link to="/our-mission" className="text-gray-600 hover:text-enactus-blue text-sm transition-colors duration-300">
+                <Link to="/our-mission" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
                   Our Mission
                 </Link>
               </li>
               <li>
-                <Link to="/palmares" className="text-gray-600 hover:text-enactus-blue text-sm transition-colors duration-300">
+                <Link to="/palmares" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
                   Palmarès
                 </Link>
               </li>
               <li>
-                <Link to="/actuality" className="text-gray-600 hover:text-enactus-blue text-sm transition-colors duration-300">
-                  Actuality
+                <Link to="/actuality" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
+                  News
                 </Link>
               </li>
             </ul>
           </motion.div>
           
           <motion.div variants={itemAnimation} className="space-y-4">
-            <h3 className="font-semibold text-base">Contact Us</h3>
+            <h3 className="font-semibold text-base text-white">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin size={18} className="text-enactus-blue flex-shrink-0 mt-0.5" />
-                <span className="text-gray-600 text-sm">École Mohammadia d'Ingénieurs, Avenue Ibn Sina, Rabat, Morocco</span>
+                <MapPin size={18} className="text-enactus-yellow flex-shrink-0 mt-0.5" />
+                <span className="text-gray-300 text-sm">École Mohammadia d'Ingénieurs, Avenue Ibn Sina, Rabat, Morocco</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail size={18} className="text-enactus-blue flex-shrink-0" />
-                <a href="mailto:contact@enactusemi.org" className="text-gray-600 hover:text-enactus-blue text-sm transition-colors duration-300">
+                <Mail size={18} className="text-enactus-yellow flex-shrink-0" />
+                <a href="mailto:contact@enactusemi.org" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
                   contact@enactusemi.org
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone size={18} className="text-enactus-blue flex-shrink-0" />
-                <a href="tel:+212500000000" className="text-gray-600 hover:text-enactus-blue text-sm transition-colors duration-300">
+                <Phone size={18} className="text-enactus-yellow flex-shrink-0" />
+                <a href="tel:+212500000000" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
                   +212 5 00 00 00 00
                 </a>
               </li>
@@ -128,18 +128,18 @@ const Footer = () => {
           </motion.div>
           
           <motion.div variants={itemAnimation} className="space-y-4">
-            <h3 className="font-semibold text-base">Newsletter</h3>
-            <p className="text-gray-600 text-sm">Subscribe to our newsletter to receive updates about our projects and events.</p>
+            <h3 className="font-semibold text-base text-white">Newsletter</h3>
+            <p className="text-gray-300 text-sm">Subscribe to our newsletter to receive updates about our projects and events.</p>
             <form className="mt-2 space-y-3">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full px-4 py-2 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-enactus-blue/50 text-sm"
+                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-enactus-yellow/50 text-sm text-white placeholder:text-gray-400"
                 required
               />
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-enactus-blue text-white rounded-md hover:bg-blue-600 transition-colors duration-300 text-sm font-medium"
+                className="w-full px-4 py-2 bg-enactus-yellow text-enactus-black rounded-md hover:bg-enactus-yellow/90 transition-colors duration-300 text-sm font-medium"
               >
                 Subscribe
               </button>
@@ -149,7 +149,7 @@ const Footer = () => {
         
         <motion.div 
           variants={itemAnimation}
-          className="mt-12 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm"
+          className="mt-12 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm"
         >
           <p>&copy; {currentYear} Enactus EMI. All rights reserved.</p>
         </motion.div>

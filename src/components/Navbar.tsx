@@ -16,7 +16,7 @@ const Navbar = () => {
     { name: "Our Projects", path: "/our-projects" },
     { name: "Our Mission", path: "/our-mission" },
     { name: "Palmarès", path: "/palmares" },
-    { name: "Actuality", path: "/actuality" },
+    { name: "News", path: "/actuality" }, // Renamed to News but keeping the path
   ];
 
   useEffect(() => {
@@ -41,8 +41,8 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+          ? "bg-enactus-black/90 backdrop-blur-md shadow-sm py-3"
+          : "bg-enactus-black py-5"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
@@ -58,7 +58,7 @@ const Navbar = () => {
             className="text-xl font-bold tracking-tight"
           >
             <span className="text-enactus-yellow">Enactus</span>
-            <span className={theme === "dark" ? "text-white" : "text-enactus-black"}> EMI</span>
+            <span className="text-white"> EMI</span>
           </motion.div>
         </Link>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
                 className={`relative px-1 py-2 text-sm font-medium transition-colors duration-300 ${
                   location.pathname === item.path
                     ? "text-enactus-yellow"
-                    : "text-foreground hover:text-enactus-yellow"
+                    : "text-white hover:text-enactus-yellow"
                 }`}
               >
                 {item.name}
@@ -106,7 +106,7 @@ const Navbar = () => {
         <div className="md:hidden flex items-center space-x-4">
           <ThemeToggle />
           <button
-            className="text-foreground focus:outline-none"
+            className="text-white focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -127,7 +127,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-background w-full overflow-hidden"
+            className="md:hidden bg-enactus-black w-full overflow-hidden"
           >
             <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
               {navItems.map((item, i) => (
@@ -142,7 +142,7 @@ const Navbar = () => {
                     className={`block py-2 text-base ${
                       location.pathname === item.path
                         ? "text-enactus-yellow font-medium"
-                        : "text-foreground"
+                        : "text-white"
                     }`}
                   >
                     {item.name}

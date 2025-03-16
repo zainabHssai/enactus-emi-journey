@@ -16,7 +16,7 @@ type ThemeProviderState = {
 };
 
 const initialState: ThemeProviderState = {
-  theme: "system",
+  theme: "dark", // Default to dark mode
   setTheme: () => null,
 };
 
@@ -24,7 +24,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
   children,
-  defaultTheme = "system",
+  defaultTheme = "dark", // Changed default to dark
   storageKey = "enactus-theme",
   ...props
 }: ThemeProviderProps) {
@@ -79,11 +79,11 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="rounded-full p-2 bg-background hover:bg-accent/20 transition-colors"
+      className="rounded-full p-2 bg-enactus-black dark:bg-background hover:bg-accent/20 transition-colors"
       aria-label="Toggle theme"
     >
       {theme === "light" ? (
-        <Moon className="h-5 w-5 text-enactus-black" />
+        <Moon className="h-5 w-5 text-enactus-yellow" />
       ) : (
         <Sun className="h-5 w-5 text-enactus-yellow" />
       )}

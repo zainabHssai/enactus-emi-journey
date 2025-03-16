@@ -12,7 +12,7 @@ import WhoWeAre from "./pages/WhoWeAre";
 import OurProjects from "./pages/OurProjects";
 import OurMission from "./pages/OurMission";
 import Palmares from "./pages/Palmares";
-import Actuality from "./pages/Actuality";
+import News from "./pages/Actuality"; // Renamed but keeping the same file
 import NotFound from "./pages/NotFound";
 
 import Navbar from "./components/Navbar";
@@ -21,7 +21,7 @@ import Footer from "./components/Footer";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider defaultTheme="system">
+  <ThemeProvider defaultTheme="dark">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
@@ -35,7 +35,7 @@ const App = () => (
               <Route path="/our-projects" element={<OurProjects />} />
               <Route path="/our-mission" element={<OurMission />} />
               <Route path="/palmares" element={<Palmares />} />
-              <Route path="/actuality" element={<Actuality />} />
+              <Route path="/actuality" element={<News />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
