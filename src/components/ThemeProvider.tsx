@@ -24,7 +24,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
 export function ThemeProvider({
   children,
-  defaultTheme = "dark", // Changed default to dark
+  defaultTheme = "dark", // Default to dark
   storageKey = "enactus-theme",
   ...props
 }: ThemeProviderProps) {
