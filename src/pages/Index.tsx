@@ -10,6 +10,7 @@ import VideoSection from "@/components/VideoSection";
 import SDGsSection from "@/components/SDGsSection";
 import QuotesSection from "@/components/QuotesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import SummitAnnouncement from "@/components/SummitAnnouncement";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -71,11 +72,14 @@ const Index = () => {
       {/* Hero Section */}
       <HeroSection />
       
+      {/* Summit Announcement Section */}
+      <SummitAnnouncement />
+      
       {/* Quotes Section */}
       <QuotesSection />
       
       {/* Featured Projects Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -84,10 +88,10 @@ const Index = () => {
             variants={staggerContainer}
             className="text-center mb-16"
           >
-            <motion.div variants={fadeInUp} className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-black dark:text-enactus-yellow rounded-full text-sm font-medium mb-3">
+            <motion.div variants={fadeInUp} className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-yellow rounded-full text-sm font-medium mb-3">
               Our Projects
             </motion.div>
-            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 text-enactus-black dark:text-white">
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Creating Lasting Impact
             </motion.h2>
             <motion.p variants={fadeInUp} className="max-w-2xl mx-auto text-muted-foreground">
@@ -229,7 +233,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-enactus-yellow/10 text-enactus-yellow mb-4">
                   <stat.icon size={28} />
                 </div>
-                <h3 className="text-4xl font-bold text-enactus-black dark:text-white mb-2">{stat.value}</h3>
+                <h3 className="text-4xl font-bold text-white mb-2">{stat.value}</h3>
                 <p className="text-muted-foreground">{stat.label}</p>
               </motion.div>
             ))}
@@ -238,7 +242,7 @@ const Index = () => {
       </section>
       
       {/* Call to Action */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

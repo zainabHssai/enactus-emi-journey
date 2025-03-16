@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle, useTheme } from "./ThemeProvider";
+import { useTheme } from "./ThemeProvider";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,8 +57,20 @@ const Navbar = () => {
             transition={{ duration: 0.5 }}
             className="text-xl font-bold tracking-tight"
           >
-            <span className="text-enactus-yellow">Enactus</span>
-            <span className="text-white"> EMI</span>
+            <motion.span 
+              className="text-enactus-yellow"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              Enactus
+            </motion.span>
+            <motion.span 
+              className="text-white"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.2 }}
+            >
+              {" EMI"}
+            </motion.span>
           </motion.div>
         </Link>
 
@@ -92,19 +104,10 @@ const Navbar = () => {
               </Link>
             </motion.div>
           ))}
-          
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 * navItems.length }}
-          >
-            <ThemeToggle />
-          </motion.div>
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center space-x-4">
-          <ThemeToggle />
+        <div className="md:hidden flex items-center">
           <button
             className="text-white focus:outline-none"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
