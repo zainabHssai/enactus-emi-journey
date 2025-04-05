@@ -1,6 +1,10 @@
-
 import { motion } from "framer-motion";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, Mail } from "lucide-react";
+
+const buttonVariants = {
+  rest: { scale: 1 },
+  hover: { scale: 1.05 },
+};
 
 const SummitAnnouncement = () => {
   return (
@@ -48,27 +52,14 @@ const SummitAnnouncement = () => {
             <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/10">
               <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-enactus-black to-enactus-black/60 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="text-enactus-yellow text-6xl font-bold mb-2">2025</div>
-                  <h3 className="text-white text-2xl font-bold mb-4">Entrepreneurial Summit</h3>
-                  <div className="text-white text-lg bg-enactus-yellow/20 rounded-full px-4 py-2 inline-block">
-                    Registration Opens Soon
-                  </div>
-                </div>
+                <div className="text-[] text-6xl font-bold mb-2">2025</div>
+                                  <h3 className="text-white text-2xl font-bold mb-4">Entrepreneurial Summit</h3>
+                  
+                
+                </div>  
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -bottom-6 -right-6 bg-background/80 backdrop-blur-lg p-4 rounded-lg border border-white/10 max-w-xs"
-            >
-              <p className="text-white text-sm">
-                Be part of Morocco's premier entrepreneurial event featuring workshops, keynotes, and pitching competitions.
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       </div>

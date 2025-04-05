@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,6 +8,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+
   const { theme } = useTheme();
 
   const navItems = [
@@ -16,16 +16,12 @@ const Navbar = () => {
     { name: "Our Projects", path: "/our-projects" },
     { name: "Our Mission", path: "/our-mission" },
     { name: "Palmarès", path: "/palmares" },
-    { name: "News", path: "/actuality" }, // Renamed to News but keeping the path
+    { name: "News", path: "/actuality" }, 
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,11 +35,11 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 shadow-lg ${
         isScrolled
-          ? "bg-enactus-black/90 backdrop-blur-md shadow-sm py-3"
-          : "bg-enactus-black py-5"
-      }`}
+          ? "bg-enactus-black/90 backdrop-blur-md py-4"
+          : "bg-enactus-black py-6"
+      } border-b-4 border-enactus-yellow shadow-[0px_4px_10px_rgba(255,204,0,0.5)]`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link 
@@ -55,22 +51,21 @@ const Navbar = () => {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+          >
+            <img 
+              src="/logo/logo2.png" 
+              alt="Enactus EMI Logo" 
+              className="h-10 w-auto"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
             className="text-xl font-bold tracking-tight"
           >
-            <motion.span 
-              className="text-enactus-yellow"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              Enactus
-            </motion.span>
-            <motion.span 
-              className="text-white"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              {" EMI"}
-            </motion.span>
+            <span className={theme === "dark" ? "text-white" : "text-enactus-black"}>Enactus </span>
+            <span style={{ color: "#ffc423" }}>EMI</span>
           </motion.div>
         </Link>
 
