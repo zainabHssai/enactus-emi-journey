@@ -41,7 +41,7 @@ const Index = () => {
       id: "project1",
       title: "Eco Innovation Hub",
       description: "Sustainable development project focused on environmental innovation.",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07",
+      image: "",
       category: "Environment"
     },
     {

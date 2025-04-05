@@ -23,7 +23,7 @@ const OurProjects = () => {
       id: "eco-innovation-hub",
       title: "Eco Innovation Hub",
       description: "A sustainable development project focused on environmental innovation, providing resources and support for eco-entrepreneurs.",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07",
+      image: "",
       category: "Environment",
       year: "2023"
     },
@@ -77,7 +77,7 @@ const OurProjects = () => {
       location: "Atlas Mountains",
       date: "March 15, 2023",
       participants: 12,
-      image: "https://images.unsplash.com/photo-1461354464878-ad92f492a5a0"
+      image: "https://images.unsplash./photo-1461354464878-ad92f492a5a0"
     },
     {
       id: "startup-incubator",

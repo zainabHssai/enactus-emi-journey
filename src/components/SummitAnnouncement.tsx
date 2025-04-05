@@ -33,15 +33,32 @@ const SummitAnnouncement = () => {
               Join us for our flagship event where innovation meets opportunity. Network with industry leaders, investors, and fellow entrepreneurs.
             </p>
             
-            <div className="flex items-center justify-center lg:justify-start bg-background/20 rounded-lg p-4 border border-white/10 backdrop-blur-sm inline-block">
-              <CalendarDays className="h-6 w-6 text-enactus-yellow mr-3" />
-              <div>
-                <span className="block text-white font-semibold">Save the Date</span>
-                <span className="text-gray-300">April 16, 2025</span>
+            <div className="flex flex-col items-center lg:items-start gap-4">
+              {/* Rectangle Save the Date box */}
+              <div className="flex items-center bg-background/20 p-4 border border-white/10 backdrop-blur-sm rounded-md w-full max-w-xs">
+                <CalendarDays className="h-6 w-6 text-enactus-yellow mr-3" />
+                <div>
+                  <span className="block text-white font-semibold">Save the Date</span>
+                  <span className="text-gray-300">April 16, 2025</span>
+                </div>
               </div>
+
+              {/* Smaller Button */}
+              <motion.a
+                href="mailto:zainabhssaini04@gmail.com?subject=I want to join the 2025 Summit"
+                variants={buttonVariants}
+                initial="rest"
+                whileHover="hover"
+                animate="rest"  
+                className="inline-flex items-center gap-2 px-4 py-2 bg-enactus-yellow text-enactus-black font-medium rounded-md shadow-md transition-all hover:shadow-lg text-sm"
+              >
+                <Mail className="w-4 h-4" />
+                Be Part of the Event
+              </motion.a>
             </div>
           </motion.div>
           
+        
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -50,14 +67,11 @@ const SummitAnnouncement = () => {
             className="relative"
           >
             <div className="relative rounded-xl overflow-hidden shadow-2xl border border-white/10">
-              <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-enactus-black to-enactus-black/60 flex items-center justify-center">
-                <div className="text-center p-8">
-                <div className="text-[] text-6xl font-bold mb-2">2025</div>
-                                  <h3 className="text-white text-2xl font-bold mb-4">Entrepreneurial Summit</h3>
-                  
-                
-                </div>  
-              </div>
+              <img
+                src="/Artboard 1.png"
+                alt="Entrepreneurial Summit 2025"
+                className="w-full h-auto object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
           </motion.div>
