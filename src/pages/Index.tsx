@@ -39,26 +39,27 @@ const Index = () => {
   const featuredProjects = [
     {
       id: "project1",
-      title: "Eco Innovation Hub",
-      description: "Sustainable development project focused on environmental innovation.",
-      image: "",
-      category: "Environment"
+      title: "S-ILK",
+      description: "Textile biodégradable à base de caséine de lait, une alternative durable aux tissus synthétiques pour réduire le gaspillage laitier.",
+      image: "silk.jpeg", // image textile écologique
+      category: "Économie circulaire"
     },
     {
       id: "project2",
-      title: "Tech Empowerment",
-      description: "Digital literacy initiative for underserved communities.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      category: "Education"
+      title: "Tadefi",
+      description: "Savon solide naturel à base de tourteau d’argane, soutenant les coopératives féminines dans une démarche sociale et durable.",
+      image: "tadefi.png", // image savon naturel
+      category: "Économie sociale"
     },
     {
       id: "project3",
-      title: "Community Growth",
-      description: "Economic development and entrepreneurship training program.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      category: "Business"
+      title: "SmartClean",
+      description: "Poignée de porte autonettoyante avec bague de gel hydroalcoolique intégrée, pour limiter la propagation des virus dans les lieux publics.",
+      image: "smartClean.png", // image hygiène/santé
+      category: "Santé publique"
     }
   ];
+  
 
   const stats = [
     { value: "20+", label: "Projects", icon: Lightbulb },
@@ -255,48 +256,49 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-enactus-black/90 to-enactus-black/70"></div>
             
             <div className="relative z-10 max-w-3xl mx-auto">
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="text-3xl md:text-4xl font-bold mb-6"
-              >
-                Join Our Mission To Create a Better World
-              </motion.h2>
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-gray-300 mb-8 text-lg"
-              >
-                Whether you're interested in volunteering, partnering, or supporting our initiatives, there are many ways you can contribute to our mission.
-              </motion.p>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex flex-wrap justify-center gap-4"
-              >
-                <Link
-                  to="/our-mission"
-                  className="px-6 py-3 bg-enactus-yellow text-enactus-black font-medium rounded-md hover:bg-enactus-yellow/90 transition-all duration-300"
-                >
-                  Learn More
-                </Link>
-                
-                <a
-                  href="mailto:contact@enactusemi.org"
-                  className="px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white/10 transition-all duration-300"
-                >
-                  Contact Us
-                </a>
-              </motion.div>
-            </div>
+  <motion.h2
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+    className="text-3xl md:text-4xl font-bold mb-6"
+  >
+    Join Us in Making a Positive Impact
+  </motion.h2>
+
+  <motion.p
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.1 }}
+    className="text-gray-300 mb-8 text-lg"
+  >
+    Whether you're an organization, a company, or an engaged citizen, you can contribute to our mission by partnering with us or simply reaching out.
+  </motion.p>
+
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.2 }}
+    className="flex flex-wrap justify-center gap-4"
+  >
+    <Link
+      to="/our-mission"
+      className="px-6 py-3 bg-enactus-yellow text-enactus-black font-medium rounded-md hover:bg-enactus-yellow/90 transition-all duration-300"
+    >
+      Explore Our Missions
+    </Link>
+
+    <a
+      href="mailto:contact@enactusemi.org"
+      className="px-6 py-3 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white/10 transition-all duration-300"
+    >
+      Contact Us
+    </a>
+  </motion.div>
+</div>
+
           </motion.div>
         </div>
       </section>

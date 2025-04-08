@@ -32,7 +32,7 @@ const ProjectCard = ({ id, title, description, image, category, delay = 0 }: Pro
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-70 group-hover:opacity-60 transition-opacity duration-500" />
           
           <div className="absolute top-4 left-4">
-            <span className="inline-block px-3 py-1 text-xs font-medium bg-white/90 text-gray-800 rounded-full">
+            <span className="inline-block px-3 py-1 text-xs font-medium bg-black/90 text-gray-800 rounded-full">
               {category}
             </span>
           </div>
