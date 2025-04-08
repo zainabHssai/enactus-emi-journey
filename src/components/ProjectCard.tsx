@@ -10,16 +10,18 @@ interface ProjectCardProps {
   image: string;
   category: string;
   delay?: number;
+  onClick?: () => void;
 }
 
-const ProjectCard = ({ id, title, description, image, category, delay = 0 }: ProjectCardProps) => {
+const ProjectCard = ({ id, title, description, image, category, delay = 0 ,onClick}: ProjectCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7, delay: delay }}
-      className="group"
+      className="group cursor-pointer" // Ajoutez cursor-pointer
+      onClick={onClick} 
     >
       <div className="relative overflow-hidden rounded-lg shadow-md card-hover">
         <div className="relative aspect-[4/3] overflow-hidden">
@@ -52,14 +54,14 @@ const ProjectCard = ({ id, title, description, image, category, delay = 0 }: Pro
           </motion.div>
         </div>
         
-        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        {/*<div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Link
             to={`/our-projects/${id}`}
             className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-300"
           >
             <ArrowUpRight size={18} className="text-enactus-blue" />
           </Link>
-        </div>
+        </div>*/}
       </div>
     </motion.div>
   );

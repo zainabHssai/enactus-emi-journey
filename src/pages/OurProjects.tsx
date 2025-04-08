@@ -1,8 +1,112 @@
-
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Filter, ArrowRight, MapPin, Calendar, Users } from "lucide-react";
+import { Search, Filter, ArrowRight, MapPin, Calendar, Users, X } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
+
+const ProjectModal = ({ project, onClose }) => {
+  if (!project) return null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ scale: 0.9, y: 20 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.9, y: 20 }}
+        className="relative bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-gray-700 shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors text-gray-300 hover:text-white"
+        >
+          <X size={20} />
+        </button>
+
+        <div className="p-8">
+          <div className="mb-6">
+            <span className="inline-block px-3 py-1 bg-enactus-yellow/20 text-enactus-yellow rounded-full text-sm font-medium mb-3">
+              {project.category}
+            </span>
+            <h2 className="text-3xl font-bold text-white mb-2">{project.title}</h2>
+            <p className="text-gray-300">{project.year}</p>
+          </div>
+
+          {project.image && (
+            <div className="mb-8 rounded-lg overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-64 object-cover"
+              />
+            </div>
+          )}
+
+          <div className="prose prose-invert max-w-none">
+            {project.id === "eco-innovation-hub" && (
+              <>
+                <p className="text-xl font-semibold text-gray-200 mb-4">Sustainable solutions for a greener future</p>
+                <hr className="border-gray-700 my-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Tech Empowerment</h3>
+                <p className="text-gray-300 mb-4">
+                  The Eco Innovation Hub represents our commitment to developing sustainable technologies and practices that address environmental challenges.
+                </p>
+                <p className="text-gray-300">
+                  This initiative focuses on bringing together researchers, entrepreneurs, and community members to create and implement innovative solutions for renewable energy, waste reduction, and conservation.
+                </p>
+                <p className="text-gray-300 mt-4">
+                  Through collaborative projects and educational programs, we aim to accelerate the transition to a more sustainable and environmentally conscious society while creating economic opportunities in the green sector.
+                </p>
+              </>
+            )}
+
+            {project.id === "tech-empowerment" && (
+              <>
+                <p className="text-xl font-semibold text-gray-200 mb-4">Digital literacy initiative for underserved communities.</p>
+                <p className="text-gray-300">
+                  This project focuses on bridging the digital divide by providing essential technology skills training to communities with limited access to digital resources. Our program includes:
+                </p>
+                <ul className="text-gray-300 mt-4 space-y-2">
+                  <li>• Basic computer literacy courses</li>
+                  <li>• Internet and digital communication skills</li>
+                  <li>• Job-relevant software training</li>
+                  <li>• Cybersecurity awareness</li>
+                  <li>• Mobile technology utilization</li>
+                </ul>
+              </>
+            )}
+
+            {project.id === "community-growth" && (
+              <>
+                <p className="text-xl font-semibold text-gray-200 mb-4">Economic development and entrepreneurship training program</p>
+                <p className="text-gray-300">
+                  Our Community Growth initiative empowers local communities through economic development programs that foster sustainable growth. The program includes:
+                </p>
+                <ul className="text-gray-300 mt-4 space-y-2">
+                  <li>• Business planning workshops</li>
+                  <li>• Financial literacy training</li>
+                  <li>• Micro-enterprise development</li>
+                  <li>• Local market analysis</li>
+                  <li>• Community leadership development</li>
+                </ul>
+              </>
+            )}
+
+            {/* Default content for other projects */}
+            {!["eco-innovation-hub", "tech-empowerment", "community-growth"].includes(project.id) && (
+              <p className="text-gray-300">{project.description}</p>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+};
 
 const OurProjects = () => {
   useEffect(() => {
@@ -11,6 +115,7 @@ const OurProjects = () => {
 
   const [filter, setFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const pageVariants = {
     initial: { opacity: 0 },
@@ -77,7 +182,7 @@ const OurProjects = () => {
       location: "Atlas Mountains",
       date: "March 15, 2023",
       participants: 12,
-      image: "https://images.unsplash./photo-1461354464878-ad92f492a5a0"
+      image: "https://images.unsplash.com/photo-1461354464878-ad92f492a5a0"
     },
     {
       id: "startup-incubator",
@@ -210,6 +315,7 @@ const OurProjects = () => {
                   image={project.image}
                   category={project.category}
                   delay={0.1 * index}
+                  onClick={() => setSelectedProject(project)}
                 />
               ))}
             </div>
@@ -350,6 +456,14 @@ const OurProjects = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
+      )}
     </motion.div>
   );
 };
