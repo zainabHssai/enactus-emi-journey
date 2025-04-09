@@ -48,59 +48,60 @@ const ProjectModal = ({ project, onClose }) => {
           )}
 
           <div className="prose prose-invert max-w-none">
-            {project.id === "eco-innovation-hub" && (
-              <>
-                <p className="text-xl font-semibold text-gray-200 mb-4">Sustainable solutions for a greener future</p>
-                <hr className="border-gray-700 my-6" />
-                <h3 className="text-2xl font-bold text-white mb-4">Tech Empowerment</h3>
-                <p className="text-gray-300 mb-4">
-                  The Eco Innovation Hub represents our commitment to developing sustainable technologies and practices that address environmental challenges.
-                </p>
-                <p className="text-gray-300">
-                  This initiative focuses on bringing together researchers, entrepreneurs, and community members to create and implement innovative solutions for renewable energy, waste reduction, and conservation.
-                </p>
-                <p className="text-gray-300 mt-4">
-                  Through collaborative projects and educational programs, we aim to accelerate the transition to a more sustainable and environmentally conscious society while creating economic opportunities in the green sector.
-                </p>
-              </>
-            )}
+          {project.id === "nuwood" && (
+  <>
+    <p className="text-xl font-semibold text-gray-200 mb-4">Bois écologique fabriqué à partir de coquilles de noix</p>
+    <p className="text-gray-300">
+      Nuwood est un biocomposite naturel créé par des élèves ingénieurs de l’EMI. Il présente les propriétés du bois tout en réduisant la déforestation. Collecté à partir des coquilles de noix dans tout le Maroc, ce produit offre une alternative durable et locale.
+    </p>
+  </>
+)}
 
-            {project.id === "tech-empowerment" && (
-              <>
-                <p className="text-xl font-semibold text-gray-200 mb-4">Digital literacy initiative for underserved communities.</p>
-                <p className="text-gray-300">
-                  This project focuses on bridging the digital divide by providing essential technology skills training to communities with limited access to digital resources. Our program includes:
-                </p>
-                <ul className="text-gray-300 mt-4 space-y-2">
-                  <li>• Basic computer literacy courses</li>
-                  <li>• Internet and digital communication skills</li>
-                  <li>• Job-relevant software training</li>
-                  <li>• Cybersecurity awareness</li>
-                  <li>• Mobile technology utilization</li>
-                </ul>
-              </>
-            )}
+{project.id === "freedge" && (
+  <>
+    <p className="text-xl font-semibold text-gray-200 mb-4">Réfrigération sans électricité</p>
+    <p className="text-gray-300">
+      Freedge utilise le principe de refroidissement évaporatif, ne nécessitant que de l’eau et du soleil. Une solution durable pour prolonger la conservation des aliments, surtout en zones rurales.
+    </p>
+  </>
+)}
 
-            {project.id === "community-growth" && (
-              <>
-                <p className="text-xl font-semibold text-gray-200 mb-4">Economic development and entrepreneurship training program</p>
-                <p className="text-gray-300">
-                  Our Community Growth initiative empowers local communities through economic development programs that foster sustainable growth. The program includes:
-                </p>
-                <ul className="text-gray-300 mt-4 space-y-2">
-                  <li>• Business planning workshops</li>
-                  <li>• Financial literacy training</li>
-                  <li>• Micro-enterprise development</li>
-                  <li>• Local market analysis</li>
-                  <li>• Community leadership development</li>
-                </ul>
-              </>
-            )}
+{project.id === "tadefi" && (
+  <>
+    <p className="text-xl font-semibold text-gray-200 mb-4">Savon naturel à base d’argane</p>
+    <p className="text-gray-300">
+      Tadefi valorise le tourteau d’argane pour produire un savon solide écologique, tout en soutenant financièrement les femmes travaillant dans les coopératives d’arganiers.
+    </p>
+  </>
+)}
 
-            {/* Default content for other projects */}
-            {!["eco-innovation-hub", "tech-empowerment", "community-growth"].includes(project.id) && (
-              <p className="text-gray-300">{project.description}</p>
-            )}
+{project.id === "smartclean" && (
+  <>
+    <p className="text-xl font-semibold text-gray-200 mb-4">Poignée de porte intelligente</p>
+    <p className="text-gray-300">
+      SmartClean est une poignée autonettoyante à base d’un mécanisme de bague coulissante qui applique automatiquement un désinfectant, limitant ainsi la transmission des virus dans les lieux publics.
+    </p>
+  </>
+)}
+
+{project.id === "i-terra" && (
+  <>
+    <p className="text-xl font-semibold text-gray-200 mb-4">Agriculture intelligente</p>
+    <p className="text-gray-300">
+      i-Terra est une station connectée qui mesure l’humidité du sol, les UV et d’autres facteurs, et ajuste automatiquement l’irrigation via l’IA. Une solution de modernisation pour les petits agriculteurs.
+    </p>
+  </>
+)}
+
+{project.id === "silk" && (
+  <>
+    <p className="text-xl font-semibold text-gray-200 mb-4">Tissu biodégradable à base de lait</p>
+    <p className="text-gray-300">
+      S-ILK propose une alternative aux tissus synthétiques avec un fil fabriqué à partir de caséine. Il est respectueux de l’environnement et biodégradable, offrant une nouvelle voie à l’industrie textile.
+    </p>
+  </>
+)}
+
           </div>
         </div>
       </motion.div>
@@ -125,83 +126,84 @@ const OurProjects = () => {
 
   const projects = [
     {
-      id: "eco-innovation-hub",
-      title: "Eco Innovation Hub",
-      description: "A sustainable development project focused on environmental innovation, providing resources and support for eco-entrepreneurs.",
-      image: "",
+      id: "nuwood",
+      title: "Nuwood",
+      description: "Un substitut 100% naturel du bois, fabriqué à partir de coquilles de noix collectées à travers le Maroc.",
+      image: "/nuwood.png", // Tu peux changer l’image si nécessaire
       category: "Environment",
-      year: "2023"
-    },
-    {
-      id: "tech-empowerment",
-      title: "Tech Empowerment",
-      description: "Digital literacy initiative for underserved communities, teaching essential tech skills to improve employability.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      category: "Education",
       year: "2022"
     },
     {
-      id: "community-growth",
-      title: "Community Growth",
-      description: "Economic development and entrepreneurship training program for local communities to foster sustainable economic growth.",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      category: "Business",
-      year: "2021"
-    },
-    {
-      id: "women-in-tech",
-      title: "Women in Tech",
-      description: "Initiative to empower women in technology fields through mentorship, training, and networking opportunities.",
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05",
-      category: "Education",
+      id: "freedge",
+      title: "Freedge",
+      description: "Système de réfrigération écologique qui ne nécessite que de l’eau et du soleil pour fonctionner grâce au refroidissement évaporatif.",
+      image: "/freedge.png",
+      category: "Environment",
       year: "2020"
     },
     {
-      id: "clean-water-initiative",
-      title: "Clean Water Initiative",
-      description: "Project focused on providing clean water solutions to rural communities through innovative filtration systems.",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07",
-      category: "Environment",
-      year: "2019"
+      id: "tadefi",
+      title: "Tadefi",
+      description: "Production de savon solide à base de tourteau d’argane, en soutien aux femmes des coopératives dans les régions d’arganiers.",
+      image: "/tadefi.png",
+      category: "Business",
+      year: "2023"
     },
     {
-      id: "youth-entrepreneurship",
-      title: "Youth Entrepreneurship",
-      description: "Program that equips young people with business skills and mentorship to start their own ventures.",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      category: "Business",
-      year: "2018"
+      id: "smartclean",
+      title: "SmartClean",
+      description: "Poignée de porte autonettoyante à base d’une bague coulissante imbibée de gel hydroalcoolique, pour limiter la propagation des virus.",
+      image: "smartClean.jpeg",
+      category: "Health",
+      year: "2021"
+    },
+    {
+      id: "i-terra",
+      title: "i-Terra",
+      description: "Station de contrôle agricole intelligente avec capteurs d’humidité, UV, pression et IA pour automatiser l’irrigation.",
+      image: "iterra.jpeg",
+      category: "Technology",
+      year: "2022"
+    },
+    {
+      id: "silk",
+      title: "SILK",
+      description: "Tissu biodégradable à base de caséine (protéine du lait), une alternative durable aux textiles synthétiques.",
+      image: "silk.jpeg",
+      category: "Environment",
+      year: "2023"
     }
   ];
-
+  
   const fieldTrips = [
-    {
-      id: "rural-community-visit",
-      title: "Rural Community Assessment",
-      description: "Visit to assess needs and opportunities in rural communities outside Rabat.",
-      location: "Atlas Mountains",
-      date: "March 15, 2023",
-      participants: 12,
-      image: "https://images.unsplash.com/photo-1461354464878-ad92f492a5a0"
-    },
-    {
-      id: "startup-incubator",
-      title: "Startup Incubator Tour",
-      description: "Exploring innovation centers and startup incubators to learn best practices.",
-      location: "Casablanca Tech Park",
-      date: "May 22, 2023",
-      participants: 18,
-      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7"
-    },
-    {
-      id: "sustainable-farm",
-      title: "Sustainable Agriculture Visit",
-      description: "Learning about sustainable farming practices and agricultural innovation.",
-      location: "Agadir Region",
-      date: "October 10, 2023",
-      participants: 15,
-      image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad"
-    }
+    
+      {
+        id: "epic-prospection-fes",
+        title: "EPIC Project Prospection",
+        description: "Field visit to meet artisans and explore waterproofing techniques for traditional fabrics.",
+        location: "Fès",
+        date: "May 5, 2024",
+        participants: 10,
+        image: "/epic.jpg"
+      },
+      {
+        id: "palmera-lab-tests",
+        title: "Palmera Textile Lab Visit",
+        description: "Testing palm fiber-based fabrics for durability and flexibility at CTTH lab.",
+        location: "Rabat – CTTH Laboratory",
+        date: "May 12, 2024",
+        participants: 6,
+        image: "/ctth.png"
+      },
+      {
+        id: "andoza-visit",
+        title: "Visit to ANDOZA",
+        description: "Meeting with experts and partners to explore textile processing and potential collaborations.",
+        location: "Témara",
+        date: "JUNE 15, 2024",
+        participants: 8,
+        image: "/andzoa.JPG"
+      }
   ];
 
   const categories = ["all", "Environment", "Education", "Business"];

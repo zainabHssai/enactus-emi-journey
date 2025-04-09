@@ -41,11 +41,13 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
-              Enactus EMI is a student organization that creates community development projects, applying business concepts to improve quality of life.
+            It’s a student-led organization that brings together passionate young people around the concept of social entrepreneurship.
+ENACTUS EMI = Engineering + Social Impact + Sustainable Innovation 🌱💡
+
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/enact.emirabat/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -53,17 +55,9 @@ const Footer = () => {
               >
                 <Instagram size={20} />
               </a>
+           
               <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="text-gray-300 hover:text-enactus-yellow transition-colors duration-300"
-              >
-                <Facebook size={20} />
-              </a>
-              <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/enactus-emi/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BeyD58a%2FGQh6RZXgkAQaAlg%3D%3D" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -115,13 +109,12 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-enactus-yellow flex-shrink-0" />
                 <a href="mailto:contact@enactusemi.org" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
-                  contact@enactusemi.org
-                </a>
+                enactusemi25@gmail.com                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-enactus-yellow flex-shrink-0" />
                 <a href="tel:+212500000000" className="text-gray-300 hover:text-enactus-yellow text-sm transition-colors duration-300">
-                  +212 5 00 00 00 00
+                  +212 708-785042
                 </a>
               </li>
             </ul>

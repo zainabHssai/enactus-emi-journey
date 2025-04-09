@@ -10,7 +10,7 @@ interface NewsCardProps {
   source?: string;
   sourceUrl?: string;
   delay?: number;
-  type: 'press' | 'event';
+  type: 'press' | 'event'| 'project';
 }
 
 const NewsCard = ({ 

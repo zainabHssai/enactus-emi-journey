@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
@@ -14,10 +13,10 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Mohammed Salmoun",
-    role: "Team Leader, Enactus EMI",
+    name: "Ihab Bokal ",
+    role: "Team Leader 2024, Enactus EMI",
     quote: "The journey to Kazakhstan taught us that determination and innovation can overcome any challenge. We're proud to bring back the Vice World Champion title to Morocco.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&crop=faces&fit=crop"
+    image: "/bokal.jpeg"
   },
   {
     id: 2,
@@ -28,17 +27,45 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Youssef El Amrani",
-    role: "Technical Lead, Enactus EMI",
-    quote: "At the World Cup, our presentation showcased how innovation and entrepreneurship can solve complex social challenges. The judges were impressed by our scalable solutions.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&crop=faces&fit=crop"
+    name: "ILyas SEHAKI",
+    role: "ALUMNI, Enactus EMI",
+    quote: "As ALUMNI at Enactus EMI, I’m beyond proud to see us bring the trophy back a decade after our 2014 win. Being part of this journey and contributing to something so impactful has been an unforgettable honor",
+    image: "/sehaki.jpeg"
   },
   {
     id: 4,
-    name: "Amine Bensouda",
-    role: "Marketing Director, Enactus EMI",
-    quote: "The competition in Kazakhstan was fierce, but our team's passion and dedication to our mission shone through. Being Vice World Champion validates our approach.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&crop=faces&fit=crop"
+    name: "Yahya Benaatouch",
+    role: "Head of the conception Team, Enactus EMI",
+    quote: "Because the most valuable prize of all was never something you could hold in your hands, it was the people who stood beside you, every step of the way.",
+    image: "/yahya.jpeg"
+  },
+  {
+    id: 5,
+    name: "Zainab Hssaini",
+    role: "Member of the presentation Cell, Enactus EMI",
+    quote: "Contributing to the success of our team through the presentation cell was an honor. Representing Morocco at the Enactus World Cup 2024 and finishing as world vice champions with EPIC was truly unforgettable!",
+    image: "/zinab.jpeg"
+  },
+  {
+    id: 6,
+    name: " Marouane MANAOUI-TEMSAMANI ",
+    role: "Member of the presentation Cell, Enactus EMI",
+    quote: "We’re proud to be Vice Champions at the Enactus World Cup in Kazakhstan! This journey, alongside 33 countries, showcased the power of innovation, teamwork, and resilience.",
+    image: "/marouane.jpeg"
+  },
+  {
+    id: 7,
+    name: "Fatima-Ezzahra Ghzou",
+    role: "Member of the presentation Cell, Enactus EMI",
+    quote: "Working on EPIC was a transformative journey. In one year, we turned an idea into something real. Through challenges and perseverance, we rose to become national champions and proud international runners-up.",
+    image: "/fati.jpeg"
+  },
+  {
+    id: 8,
+    name: "Aya Fathi",
+    role: "Member of the presentation Cell, Enactus EMI",
+    quote: "At the World Cup, our presentation showcased how innovation and entrepreneurship can solve complex social challenges. The judges were impressed by our scalable solutions.",
+    image: "/fathi.jpeg"
   }
 ];
 
@@ -104,7 +131,7 @@ const TestimonialsSection = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="relative aspect-square md:aspect-auto"
+                className="relative w-full h-[400px] md:h-[500px]"
               >
                 <img 
                   src={testimonials[current].image} 

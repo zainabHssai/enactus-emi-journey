@@ -45,7 +45,7 @@ const SummitAnnouncement = () => {
 
               {/* Smaller Button */}
               <motion.a
-                href="mailto:contact@enactusemi.org?subject=I want to join the 2025 Summit"
+                href="mailto:enactusemi25@gmail.com?subject=I want to join the 2025 Summit"
                 variants={buttonVariants}
                 initial="rest"
                 whileHover="hover"
