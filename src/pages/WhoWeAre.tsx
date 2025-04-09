@@ -17,7 +17,7 @@ const WhoWeAre = () => {
           name: "Idriss Kerab",
           position: "Project Manager for 'LUMA'",
           year: "2024",
-          image: "idriss kerab.jpeg"
+          image: "idriss.png"
         },
         {
           id: 3,
@@ -47,13 +47,7 @@ const WhoWeAre = () => {
           year: "2024",
           image: "badr eddin kettani.jpeg"
         },
-        {
-          id: 7,
-          name: "Rania Oulhaj",
-          position: "Head of the Sponsoring Team",
-          year: "2024",
-          image: "rania oulhaj.jpeg"
-        },
+       
         // {
         //   id: 8,
         //   name: "Chaïmae Toubali",
